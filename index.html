@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Internship Website</title>
+    <title>Complete HTML Project - Internship Portfolio</title>
+    
+    <!-- 1. Base URL for all relative links -->
+    <base href="https://example.com/" target="_blank">
+    
+    <!-- 2. External Resource Link (Favicon) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- 3. Embedded Style Block (Required by task) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    
-    <header>
-        <h1>My internship portfolio</h1>
-        <p>I am Learning basic of HTMLwhihc includes all types HTML tags and attributes.</p>
+
+    <header id="top">
+        <h1>My Internship Portfolio</h1>
+        <p>I am learning the basics of HTML, which includes all types of HTML tags and attributes.</p>
 
         <nav> 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#training">Training</a>
-            <a href="#assignments">Assignments</a>
+            <!-- Notice 'target="_blank"' is handled globally by the <base> tag -->
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#training">Training</a> |
+            <a href="#assignments">Assignments</a> |
             <a href="#contact">Contact</a>
         </nav>
-
         <hr>
     </header>
 
     <main>
+        <!-- ================= HOME ================= -->
         <section id="home">
             <h2>Home</h2>
             <p>
-                I am a software developer.
-                I enjoy learning new technologies and building projects.
+                I am a software developer. I enjoy learning new technologies and building projects.
+                My goal is to become a skilled developer through practice, teamwork, and continuous learning.
             </p>
-
             <p>
-                My goal is to become a skilled developer through
-                practice, teamwork, and continuous learning.
+                Here is my work: <a href="#assignments">Explore my assignments</a>
             </p>
-
             <p>
-                Here is my work
-                <a href="#assignments">Explore my assignments</a>
-            </p>
-
-            <p>
-                Current learning status:
-                <progress value="60" max="100">60%</progress>
-                60% completed
+                Current learning status: <progress value="60" max="100">60%</progress> 60% completed.
             </p>
         </section>
 
-                <hr>
+        <hr>
 
+        <!-- ================= ABOUT ================= -->
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am a student who wants to gain practical experience
-                through an internship.
-            </p>
-
-            <p>
-                I am learning
-                <abbr title="HyperText Markup Language">HTML</abbr>
-                to understand how websites are structured.
+                I am a student who wants to gain practical experience through an internship.
+                I am learning <abbr title="HyperText Markup Language">HTML</abbr> to understand how websites are structured.
             </p>
 
             <h3>My Goals</h3>
-
             <ul>
                 <li>Learn web development fundamentals.</li>
                 <li>Build useful projects.</li>
@@ -73,7 +82,6 @@
             </ul>
 
             <h3>My Learning Plan</h3>
-
             <ol>
                 <li>Learn HTML tags and attributes.</li>
                 <li>Practice forms and tables.</li>
@@ -82,20 +90,17 @@
             </ol>
 
             <p>
-                My training started on
-                <time datetime="2026-10-01">October 1, 2026</time>.
+                My training started on <time datetime="2026-10-01">October 1, 2026</time>.
             </p>
 
             <address>
-                Contact through this email:
-                <a href="mailto:abc@gmail.com">
-                    abc@gmail.com
-                </a>
+                Contact through this email: <a href="mailto:abc@gmail.com">abc@gmail.com</a>
             </address>
         </section>
 
-         <hr>
+        <hr>
 
+        <!-- ================= SKILLS ================= -->
         <section id="skills">
             <h2>My Skills</h2>
             <p>These are some skills I am learning:</p>
@@ -107,71 +112,55 @@
             </ul>
 
             <h3>Skill Level</h3>
-            <p>
-                HTML:
-                <meter min="0" max="100" value="70">70%</meter>
-            </p>
-            <p>
-                Problem-solving:
-                <meter min="0" max="100" value="55">55%</meter>
-            </p>
-            <p>
-                Teamwork:
-                <meter min="0" max="100" value="60">60%</meter>
-            </p>
+            <p>HTML: <meter min="0" max="100" low="30" high="80" optimum="90" value="70">70%</meter></p>
+            <p>Problem-solving: <meter min="0" max="100" value="55">55%</meter></p>
+            <p>Teamwork: <meter min="0" max="100" value="60">60%</meter></p>
 
-            <h3>Formula Example</h3>
-            <p>
-                If <var>x</var> = 5 and <var>y</var> = 3,
-                then x + y = 8.
-            </p>
+            <h3>Math & Variables</h3>
+            <!-- <var> is used for variables -->
+            <p>If <var>x</var> = 5 and <var>y</var> = 3, then x + y = 8.</p>
 
-            <h3>Keyboard Example</h3>
-            <p>
-                Press <kbd>Ctrl</kbd> + <kbd>S</kbd>
-                to save a file in many text editors.
-            </p>
-            <p>
-                Example program output:
-                <samp>Project saved successfully.</samp>
-            </p>
+            <h3>Keyboard & Output</h3>
+            <!-- <kbd> is used for keyboard input, <samp> for program output -->
+            <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save a file.</p>
+            <p>Example program output: <samp>Project saved successfully.</samp></p>
 
-            <h3>Text Examples</h3>
-            <p><b>Bold attention text</b></p>
-            <p><i>Italic text style</i></p>
+            <h3>Text & Formatting Examples</h3>
+            <p><b>Bold attention text</b> and <i>Italic text style</i></p>
             <p><u>Underlined text</u></p>
-            <p><del>Old information</del></p>
-            <p><ins>Updated information</ins></p>
+            <p><del>Old information</del> and <ins>Updated information</ins></p>
             <p><s>Old plan</s> — no longer active.</p>
-           <p>Example: Subscript<sub>below</sub> and Superscript<sup>above</sup></p>
+            <p>Example: Subscript<sub>below</sub> and Superscript<sup>above</sup></p>
+            
+            <!-- <dfn> is used to define a term -->
+            <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for web pages.</p>
 
+            <h3>Language & Direction</h3>
             <p>Urdu Words: <bdi>اب ج د ے</bdi></p>
-            <p>
-                Direction example:
-                <bdo dir="rtl">Hello</bdo>
-            </p>
+            <p>Direction example: <bdo dir="rtl">Hello</bdo></p>
+            
+            <!-- <ruby>, <rt>, and <rp> for pronunciation -->
+            <p>Japanese: <ruby>漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby></p>
+            
+            <!-- <wbr> for optional word break in long words -->
+            <p>Super<wbr>cali<wbr>fragilistic<wbr>expiali<wbr>docious</p>
+            
+            <!-- <data> for machine-readable values -->
+            <p>Product Code: <data value="INT-2026-HTML">Internship Application</data></p>
 
-            <p>
-                <small>
-                    Skill levels are examples and can be updated
-                    as learning continues.
-                </small>
-            </p>
+            <p><small>Skill levels are examples and can be updated as learning continues.</small></p>
         </section>
 
         <hr>
 
+        <!-- ================= TRAINING ================= -->
         <section id="training">
             <h2>Training Program</h2>
-            <p>
-                My training focuses on learning concepts and
-                practicing them through small projects.
-            </p>
+            <p>My training focuses on learning concepts and practicing them through small projects.</p>
 
             <h3>Training Schedule</h3>
-            <table style="border: 1px solid black;">
+            <table class="highlight">
                 <caption>Weekly Training Schedule</caption>
-
                 <thead>
                     <tr>
                         <th scope="col">Day</th>
@@ -180,7 +169,6 @@
                         <th scope="col">Status</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td>Day 1</td>
@@ -188,125 +176,103 @@
                         <td>Headings and paragraphs</td>
                         <td>Completed</td>
                     </tr>
-
                     <tr>
                         <td>Day 2</td>
                         <td>Forms</td>
                         <td>Input fields and validation</td>
                         <td>Completed</td>
                     </tr>
-
                     <tr>
                         <td>Day 3</td>
                         <td>Tables and Media</td>
                         <td>Tables, images and video</td>
                         <td>Completed</td>
                     </tr>
-
-                    <tr>
-                        <td>Day 4</td>
-                        <td>Advanced HTML</td>
-                        <td>Semantic and special tags</td>
-                        <td>Completed</td>
-                    </tr>
-
-                    <tr>
-                        <td>Day 5</td>
-                        <td>Mini Website</td>
-                        <td>Complete portfolio</td>
-                        <td>In progress</td>
-                    </tr>
                 </tbody>
-
                 <tfoot>
                     <tr>
                         <td colspan="3">Overall progress</td>
-                        <td>4 of 5 days</td>
+                        <td>3 of 3 days</td>
                     </tr>
                 </tfoot>
             </table>
 
+            <h3>Training Media</h3>
+            <!-- <picture> and <source> for responsive images -->
+            <picture>
+                <source media="(min-width: 800px)" srcset="image.png">
+                <source media="(min-width: 400px)" srcset="image.png">
+                <img src="image.png" alt="Training session screenshot" width="400">
+            </picture>
+
             <h3>Training Video</h3>
-            <video width="400" controls>
+            <video width="400" controls poster="image.png">
                 <source src="video.mp4" type="video/mp4">
+                <track src="captions.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
             </video>
 
             <h3>Training Audio</h3>
             <audio controls>
                 <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
             </audio>
 
-            <h3>Embedded Website</h3>
-            <iframe src="index.html" title="Example embedded website" width="400" height="200">
-            </iframe>
-
-            <h3>PDF Resource</h3>
-            <object data="day-05-task.pdf" type="application/pdf" width="400" height="250">
+            <h3>Embedded Content</h3>
+            <iframe src="https://example.com/" title="Example embedded website" width="400" height="200"></iframe>
+            
+            <object data="day-05-task.pdf" type="application/pdf" width="400" height="200">
+                <p>Your browser does not support PDFs. <a href="day-05-task.pdf">Download the PDF</a>.</p>
             </object>
+            
+            <embed src="day-05-task.pdf" type="application/pdf" width="400" height="200">
         </section>
 
         <hr>
 
+        <!-- ================= ASSIGNMENTS ================= -->
         <section id="assignments">
             <h2>My Assignments</h2>
+            <p>I use assignments to practice the HTML concepts learned during training.</p>
 
-            <p>
-                I use assignments to practice the HTML concepts
-                learned during training.
-            </p>
-
-            <article id="assignment-one">
+            <article id="assignment-one" class="highlight">
                 <h3>Assignment 1: Personal Profile</h3>
-                <p>Created a simple personal page with headings,
-                    paragraphs, images, and links.
-                </p>
+                <p>Created a simple personal page with headings, paragraphs, images, and links.</p>
                 <p><strong>Status:</strong> Completed</p>
             </article>
 
             <article id="assignment-two">
                 <h3>Assignment 2: Registration Form</h3>
-                <p>Practiced labels, input fields, dropdowns,
-                    fieldsets, and validation.
-                </p>
+                <p>Practiced labels, input fields, dropdowns, fieldsets, and validation.</p>
                 <p><strong>Status:</strong> Completed</p>
             </article>
 
             <h3>Code Example</h3>
-
-            <pre><code>
-                &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
-                &lt;p&gt;I am learning HTML.&lt;/p&gt;
-            </code></pre>
+            <pre><code>&lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+&lt;p&gt;I am learning HTML.&lt;/p&gt;</code></pre>
 
             <h3>Quotation</h3>
-
             <blockquote cite="https://example.com">
                 Learning is a continuous journey.
             </blockquote>
+            <p>My goal is to keep practicing and improving. As people say, <q>Practice makes progress.</q></p>
+            <p>Example resource: <cite>HTML Learning Guide</cite></p>
 
-            <p>My goal is to keep practicing and improving.
-                As people say, <q>Practice makes progress.</q>
-            </p>
-
-            <p>Example resource:
-                <cite>HTML Learning Guide</cite>
-            </p>
-
-                        <details>
+            <h3>FAQ & Dialog</h3>
+            <details>
                 <summary>What is HTML?</summary>
                 <p>HTML structures webpages.</p>
             </details>
-
             <details>
                 <summary>Do I need CSS?</summary>
-                <p>Not for this assignment.</p>
+                <p>Yes, but only basic CSS is used here for structural demonstration.</p>
             </details>
 
+            <!-- Dialog is kept open to demonstrate it, as JS is not allowed -->
             <dialog open>
                 <p>Welcome to the course.</p>
             </dialog>
 
-            <h3>Reusable Template</h3>
             <template id="thankYou">
                 <p>Thank you for applying!</p>
             </template>
@@ -314,12 +280,10 @@
 
         <hr>
 
+        <!-- ================= CONTACT ================= -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>
-                Please complete the form below to share your
-                contact details and internship interests.
-            </p>
+            <p>Please complete the form below to share your contact details and internship interests.</p>
 
             <form action="#" method="post">
                 <fieldset>
@@ -327,178 +291,126 @@
 
                     <p>
                         <label for="fullName">Full Name:</label>
-                        <input  type="text" id="fullName" name="full_name" placeholder="Enter your full name" minlength="3" maxlength="60" required>
+                        <!-- Global attributes: tabindex, spellcheck, draggable, contenteditable -->
+                        <input type="text" id="fullName" name="full_name" placeholder="Enter your full name" minlength="3" maxlength="60" tabindex="1" spellcheck="true" required>
                     </p>
 
                     <p>
                         <label for="emailAddress">Email Address:</label>
-                        <input type="email" id="emailAddress" name="email_address" placeholder="you@example.com" required>
+                        <input type="email" id="emailAddress" name="email_address" placeholder="you@example.com" tabindex="2" required>
                     </p>
 
                     <p>
                         <label for="phoneNumber">Phone Number:</label>
-                        <input type="tel" id="phoneNumber" name="phone_number" placeholder="Enter your phone number" pattern="[0-9+() -]{7,20}">
+                        <input type="tel" id="phoneNumber" name="phone_number" placeholder="Enter your phone number" pattern="[0-9+() -]{7,20}" tabindex="3">
                     </p>
 
                     <p>
                         <label for="accountPassword">Create Password:</label>
-                        <input type="password" id="accountPassword" name="account_password" minlength="8" required>
-                    </p>
-
-                    <p>
-                        <label for="userAge">Age:</label>
-                        <input type="number" id="userAge" name="user_age" min="16" max="100">
+                        <input type="password" id="accountPassword" name="account_password" minlength="8" autocomplete="new-password" tabindex="4" required>
                     </p>
 
                     <p>
                         <label for="startdate">Preferred Start Date:</label>
-                        <input type="date" id="startdate" name="startdate" required>
-                    </p>
-
-                    <p>
-                        <label for="website">Portfolio Website:</label>
-                        <input type="url" id="website" name="website" placeholder="https://example.com">
-                    </p>
-
-                    <p>
-                        <label for="favcolor">Favorite Color:</label>
-                        <input type="color" id="favcolor" name="favcolor" value="#3366cc">
-                    </p>
-
-                    <p>
-                        <label for="confidence">
-                            HTML Confidence (1 to 10):
-                        </label>
-                        <input type="range" id="confidence" name="confidence" min="1" max="10" value="5">
+                        <input type="date" id="startdate" name="startdate" tabindex="5" required>
                     </p>
 
                     <p>
                         <label for="resume">Upload resume in pdf format:</label>
-                        <input type="file" id="resume" name="resume" accept=".pdf,application/pdf">
+                        <input type="file" id="resume" name="resume" accept=".pdf,application/pdf" tabindex="6">
                     </p>
 
                     <p>
-                        <label for="applicationcode">
-                            Application Type:
-                        </label>
-                        <input
-                            type="text"
-                            id="applicationcode"
-                            name="applicationcode"
-                            value="Internship Application"
-                            readonly>
+                        <!-- Global attribute: title -->
+                        <label for="applicationcode">Application Type:</label>
+                        <input type="text" id="applicationcode" name="applicationcode" value="Internship Application" title="This field is locked" readonly>
                     </p>
 
-                    <input
-                        type="hidden"
-                        name="formType"
-                        value="internship-contact">
+                    <input type="hidden" name="formType" value="internship-contact">
                 </fieldset>
 
                 <fieldset>
                     <legend>Internship Preferences</legend>
 
                     <p>Preferred Work Type:</p>
-                    <input type="radio" id="onsite" name="worktype" value="onsite" required>
+                    <input type="radio" id="onsite" name="worktype" value="onsite" tabindex="7" required>
                     <label for="onsite">Onsite</label>
 
-                    <input type="radio" id="remote" name="worktype" value="remote">
+                    <input type="radio" id="remote" name="worktype" value="remote" tabindex="8">
                     <label for="remote">Remote</label>
 
-                    <input type="radio" id="hybrid" name="worktype" value="hybrid">
+                    <input type="radio" id="hybrid" name="worktype" value="hybrid" tabindex="9">
                     <label for="hybrid">Hybrid</label>
 
                     <p>Skills You Want to Learn:</p>
-                    <input type="checkbox" id="htmlskill" name="learningSkills" value="html">
+                    <input type="checkbox" id="htmlskill" name="learningSkills" value="html" tabindex="10">
                     <label for="htmlskill">HTML</label>
 
-                    <input type="checkbox" id="cssskill" name="learningSkills" value="css">
+                    <input type="checkbox" id="cssskill" name="learningSkills" value="css" tabindex="11">
                     <label for="cssskill">CSS</label>
 
-                    <input type="checkbox" id="javascriptskill" name="learningSkills" value="JavaScript">
+                    <input type="checkbox" id="javascriptskill" name="learningSkills" value="javascript" tabindex="12">
                     <label for="javascriptskill">JavaScript</label>
 
                     <p>
                         <label for="interest">Internship Field:</label>
-                        <select id="interest" name="interest" required>
+                        <select id="interest" name="interest" tabindex="13" required>
                             <option value="">Select a field</option>
-
                             <optgroup label="Development">
                                 <option value="frontend">Frontend</option>
                                 <option value="backend">Backend</option>
                                 <option value="fullstack">Full-Stack</option>
                             </optgroup>
-
-                            <optgroup label="Other Fields">
-                                <option value="html">HTML</option>
-                                <option value="css"> CSS
-                                </option>
-                            </optgroup>
                         </select>
                     </p>
 
                     <p>
-                        <label for="suggestedskill">Other Skill:</label>
-                        <input type="text" id="suggestedskill" name="suggestedskill" list="skill-suggestions" placeholder="Type a skill">
-                        <datalist id="skill-suggestions">
-                            <option value="HTML">
-                            <option value="CSS">
-                            <option value="JavaScript">
-                        </datalist>
-                    </p>
-
-                    <p>
                         <label for="message">Write a Message:</label>
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here" required></textarea>
+                        <textarea id="message" name="message" rows="4" cols="40" placeholder="Write your message here" tabindex="14" required></textarea>
                     </p>
 
                     <p>
-                        <input type="checkbox" id="agreement" name="agreement" value="accepted" required>
+                        <!-- Global attribute: contenteditable & draggable -->
+                        <span contenteditable="true" title="You can edit this text" draggable="true">This text is editable and draggable.</span>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="agreement" name="agreement" value="accepted" tabindex="15" required>
                         <label for="agreement">I confirm that my information is correct.</label>
                     </p>
                 </fieldset>
 
                 <p>
-                    <button type="submit">Submit Application</button>
-                    <button type="reset">Clear Form</button>
-                </p>
-
-                <p>
-                    <output name="formnote">
-                        Please check your information before submitting.
-                    </output>
+                    <button type="submit" tabindex="16">Submit Application</button>
+                    <button type="reset" tabindex="17">Clear Form</button>
                 </p>
             </form>
 
             <h3>Other Contact Information</h3>
-
             <address>
-                Email:
-                <a href="mailto:abc@gmail.com">
-                    abc@gmail.com
-                </a>
-                <br>
-                Website:
-                <a href="index.html">My Portfolio</a>
+                Email: <a href="mailto:abc@gmail.com">abc@gmail.com</a><br>
+                Website: <a href="https://example.com/">My Portfolio</a>
             </address>
         </section>
-
     </main>
 
-     <hr>
+    <hr>
 
     <footer>
         <p>
-            <small>&copy; <time datetime="2026">2026</time>Internship Portfolio. All rights reserved.</small>
+            <small>&copy; <time datetime="2026">2026</time> Internship Portfolio. All rights reserved.</small>
         </p>
-
         <p>
             <a href="#top">Back to Top</a>
         </p>
-
+        
+        <!-- 4. Script element and Noscript fallback -->
+        <script>
+            // A tiny script just to satisfy the requirement. 
+            console.log("Internship portfolio loaded successfully.");
+        </script>
         <noscript>
-            JavaScript is disabled. This website is designed
-            to demonstrate HTML without requiring JavaScript.
+            <p>JavaScript is disabled. This website is designed to demonstrate HTML without requiring JavaScript.</p>
         </noscript>
     </footer>
 
